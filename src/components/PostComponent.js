@@ -16,8 +16,9 @@ const Posts = () => {
   }, [])
 
   return (
-    <>
+    <div className="row">
       <div className="col-lg-9 col-md-7 mx-auto space-2 px-lg-0">
+        <h2 className="title text-uppercase mb-4 fw-700">Latest Posts</h2>
         {posts.loading && <h1 className="text-center">Loading...</h1>}
 
         {error && !loading && <h1 className="text-center">{error}</h1>}
@@ -28,7 +29,7 @@ const Posts = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
